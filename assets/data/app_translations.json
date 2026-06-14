@@ -1,0 +1,314 @@
+{
+  "favorites": {
+    "en": "Favorites",
+    "es": "Favoritos"
+  },
+  "matches": {
+    "en": "Matches",
+    "es": "Partidos"
+  },
+  "myFavorites": {
+    "en": "My Favorites",
+    "es": "Mis Favoritos"
+  },
+  "myCompetition": {
+    "en": "MY COMPETITION",
+    "es": "MI COMPETICIÓN"
+  },
+  "allCountries": {
+    "en": "All Countries",
+    "es": "Todos los países"
+  },
+  "groupStage": {
+    "en": "Group Stage",
+    "es": "Fase de Grupos"
+  },
+  "knockoutStage": {
+    "en": "Knockout Stage",
+    "es": "Eliminatorias"
+  },
+  "todayMatches": {
+    "en": "Today Matches",
+    "es": "Partidos de Hoy"
+  },
+  "live": {
+    "en": "Live",
+    "es": "En Curso"
+  },
+  "finished": {
+    "en": "Finished",
+    "es": "Finalizados"
+  },
+  "upcomingMatches": {
+    "en": "Upcoming Matches",
+    "es": "Próximos Partidos"
+  },
+  "searchHint": {
+    "en": "Search team, city...",
+    "es": "Buscar selección, ciudad..."
+  },
+  "tournamentProgress": {
+    "en": "TOURNAMENT PROGRESS",
+    "es": "PROGRESO DEL TORNEO"
+  },
+  "of": {
+    "en": "of",
+    "es": "de"
+  },
+  "played": {
+    "en": "played",
+    "es": "jugados"
+  },
+  "noMatchesFound": {
+    "en": "No matches match your filters",
+    "es": "No hay partidos que coincidan"
+  },
+  "tryChangingFilters": {
+    "en": "Try changing filters or your search query.",
+    "es": "Prueba cambiando los filtros o la búsqueda."
+  },
+  "resetFilters": {
+    "en": "Reset filters",
+    "es": "Restablecer filtros"
+  },
+  "noFavoritesYet": {
+    "en": "No favorite matches yet",
+    "es": "Aún no tienes partidos favoritos"
+  },
+  "tapHeartToFavorite": {
+    "en": "Tap the heart icon on any match to add it to this section.",
+    "es": "Presiona el icono de corazón en cualquier partido para agregarlo a esta sección."
+  },
+  "viewFullSchedule": {
+    "en": "View Full Schedule",
+    "es": "Ver Calendario Completo"
+  },
+  "errorLoadingMatches": {
+    "en": "Error loading matches",
+    "es": "Error al cargar los partidos"
+  },
+  "retry": {
+    "en": "Retry",
+    "es": "Reintentar"
+  },
+  "addedToFavorites": {
+    "en": "Added to favorites",
+    "es": "Agregado a tus favoritos"
+  },
+  "removedFromFavorites": {
+    "en": "Removed from favorites",
+    "es": "Eliminado de tus favoritos"
+  },
+  "errorUpdatingFavorite": {
+    "en": "Error updating favorite",
+    "es": "Error al actualizar favorito"
+  },
+  "liveLower": {
+    "en": "live",
+    "es": "en curso"
+  },
+  "todayLower": {
+    "en": "today",
+    "es": "hoy"
+  },
+  "favoritesLower": {
+    "en": "favorites",
+    "es": "favoritos"
+  },
+  "matchFilters": {
+    "en": "Match Filters",
+    "es": "Filtros de Partidos"
+  },
+  "hostCountry": {
+    "en": "Host Country",
+    "es": "País Anfitrión"
+  },
+  "all": {
+    "en": "All",
+    "es": "Todos"
+  },
+  "allF": {
+    "en": "All",
+    "es": "Todas"
+  },
+  "tournamentStage": {
+    "en": "Tournament Stage",
+    "es": "Fase del Torneo"
+  },
+  "allStages": {
+    "en": "All Stages",
+    "es": "Todas las Fases"
+  },
+  "roundOf32": {
+    "en": "Round of 32",
+    "es": "Dieciseisavos de Final"
+  },
+  "roundOf16": {
+    "en": "Round of 16",
+    "es": "Octavos de Final"
+  },
+  "quarterFinals": {
+    "en": "Quarter-finals",
+    "es": "Cuartos de Final"
+  },
+  "semiFinals": {
+    "en": "Semi-finals",
+    "es": "Semifinales"
+  },
+  "thirdPlace": {
+    "en": "Third Place Play-off",
+    "es": "Tercer Lugar"
+  },
+  "grandFinal": {
+    "en": "Final",
+    "es": "Gran Final"
+  },
+  "showFavoritesOnly": {
+    "en": "Show favorites only",
+    "es": "Mostrar solo favoritos"
+  },
+  "matchStatus": {
+    "en": "Match Status",
+    "es": "Estado del Partido"
+  },
+  "tomorrow": {
+    "en": "Tomorrow",
+    "es": "Mañana"
+  },
+  "next3Days": {
+    "en": "Next 3 days",
+    "es": "Próximos 3 días"
+  },
+  "upcoming": {
+    "en": "Upcoming",
+    "es": "Próximos"
+  },
+  "matchResults": {
+    "en": "Match Results",
+    "es": "Resultados de Marcador"
+  },
+  "withScore": {
+    "en": "With Score",
+    "es": "Con Marcador"
+  },
+  "withoutScore": {
+    "en": "Without Score",
+    "es": "Sin Marcador"
+  },
+  "clearFilters": {
+    "en": "Clear Filters",
+    "es": "Limpiar Filtros"
+  },
+  "applyFilters": {
+    "en": "Apply Filters",
+    "es": "Aplicar Filtros"
+  },
+  "matchDetail": {
+    "en": "Match Detail",
+    "es": "Detalle de Partido"
+  },
+  "groupStageLabel": {
+    "en": "GROUP STAGE • GROUP",
+    "es": "FASE DE GRUPOS • GRUPO"
+  },
+  "finalResult": {
+    "en": "FINAL RESULT",
+    "es": "RESULTADO FINAL"
+  },
+  "schedulesBroadcast": {
+    "en": "Schedules and Broadcast",
+    "es": "Horarios y Transmisión"
+  },
+  "stadiumLocalTime": {
+    "en": "Local Stadium Time",
+    "es": "Hora Local en Estadio"
+  },
+  "deviceLocalTime": {
+    "en": "Your Local Time (Device)",
+    "es": "Tu Hora Local (Dispositivo)"
+  },
+  "venueDetails": {
+    "en": "Venue Details",
+    "es": "Detalles de la Sede"
+  },
+  "capacity": {
+    "en": "Capacity",
+    "es": "Capacidad"
+  },
+  "inauguration": {
+    "en": "Inauguration",
+    "es": "Inauguración"
+  },
+  "grass": {
+    "en": "Pitch",
+    "es": "Césped"
+  },
+  "naturalHybrid": {
+    "en": "Natural Hybrid",
+    "es": "Natural Híbrido"
+  },
+  "hybridReinforced": {
+    "en": "Hybrid reinforced",
+    "es": "Híbrido reforzado"
+  },
+  "syntheticPremium": {
+    "en": "Synthetic Premium",
+    "es": "Sintético Premium"
+  },
+  "naturalGrass": {
+    "en": "Natural Grass",
+    "es": "Césped Natural"
+  },
+  "syntheticMatrix": {
+    "en": "Synthetic Matrix",
+    "es": "Sintético Matrix"
+  },
+  "lineupsTitle": {
+    "en": "Predicted Lineups (Visual Pitch)",
+    "es": "Alineaciones Previstas (Falso Pitch)"
+  },
+  "homeLineup": {
+    "en": "Home Lineup",
+    "es": "Alineación Local"
+  },
+  "awayLineup": {
+    "en": "Away Lineup",
+    "es": "Alineación Visitante"
+  },
+  "editResult": {
+    "en": "Edit Result",
+    "es": "Editar Marcador"
+  },
+  "enterScore": {
+    "en": "Enter Score",
+    "es": "Capturar Marcador"
+  },
+  "cancel": {
+    "en": "Cancel",
+    "es": "Cancelar"
+  },
+  "save": {
+    "en": "Save",
+    "es": "Guardar"
+  },
+  "suggestedMaxGols": {
+    "en": "Suggested maximum: 20 goals.",
+    "es": "Máximo sugerido: 20 goles."
+  },
+  "negativeGolsError": {
+    "en": "Goals cannot be negative.",
+    "es": "Los goles no pueden ser negativos."
+  },
+  "maxGolsError": {
+    "en": "Suggested maximum limit is 20 goals.",
+    "es": "El límite máximo sugerido es 20 goles."
+  },
+  "saveError": {
+    "en": "Error saving result offline.",
+    "es": "Error al guardar el resultado offline."
+  },
+  "unexpectedError": {
+    "en": "An unexpected error occurred.",
+    "es": "Ocurrió un error inesperado."
+  }
+}

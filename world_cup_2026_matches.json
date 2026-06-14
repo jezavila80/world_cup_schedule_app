@@ -1,0 +1,3448 @@
+{
+  "metadata": {
+    "tournament": "FIFA World Cup 2026",
+    "matchCount": 104,
+    "sourceTimezone": "Europe/London",
+    "appDefaultTimezone": "America/Mexico_City",
+    "generatedAt": "2026-06-11",
+    "notes": [
+      "Kickoff source times were listed in UK time and converted to UTC and America/Mexico_City.",
+      "Knockout-stage teams are placeholders until results determine participants.",
+      "Stadium names are normalized generic host-venue names for app display."
+    ]
+  },
+  "matches": [
+    {
+      "id": "M001",
+      "matchNumber": 1,
+      "stage": "Group Stage",
+      "group": "A",
+      "homeTeam": {
+        "name": "Mexico",
+        "fifaCode": "MEX",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "South Africa",
+        "fifaCode": "RSA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-11T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-11T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-11T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-11",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Mexico City Stadium",
+        "city": "Mexico City",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M002",
+      "matchNumber": 2,
+      "stage": "Group Stage",
+      "group": "A",
+      "homeTeam": {
+        "name": "Korea Republic",
+        "fifaCode": "KOR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Czechia",
+        "fifaCode": "CZE",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-12T03:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-12T02:00:00Z",
+        "mexicoCityDateTime": "2026-06-11T20:00:00-06:00",
+        "mexicoCityDate": "2026-06-11",
+        "mexicoCityTime": "20:00"
+      },
+      "venue": {
+        "stadium": "Guadalajara Stadium",
+        "city": "Zapopan",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M003",
+      "matchNumber": 3,
+      "stage": "Group Stage",
+      "group": "B",
+      "homeTeam": {
+        "name": "Canada",
+        "fifaCode": "CAN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Bosnia and Herzegovina",
+        "fifaCode": "BIH",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-12T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-12T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-12T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-12",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Toronto Stadium",
+        "city": "Toronto",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M004",
+      "matchNumber": 4,
+      "stage": "Group Stage",
+      "group": "D",
+      "homeTeam": {
+        "name": "USA",
+        "fifaCode": "USA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Paraguay",
+        "fifaCode": "PAR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-13T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-13T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-12T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-12",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M005",
+      "matchNumber": 5,
+      "stage": "Group Stage",
+      "group": "B",
+      "homeTeam": {
+        "name": "Qatar",
+        "fifaCode": "QAT",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Switzerland",
+        "fifaCode": "SUI",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-13T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-13T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-13T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-13",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "San Francisco Bay Area Stadium",
+        "city": "Santa Clara",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M006",
+      "matchNumber": 6,
+      "stage": "Group Stage",
+      "group": "C",
+      "homeTeam": {
+        "name": "Brazil",
+        "fifaCode": "BRA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Morocco",
+        "fifaCode": "MAR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-13T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-13T22:00:00Z",
+        "mexicoCityDateTime": "2026-06-13T16:00:00-06:00",
+        "mexicoCityDate": "2026-06-13",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "New York New Jersey Stadium",
+        "city": "New Jersey",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M007",
+      "matchNumber": 7,
+      "stage": "Group Stage",
+      "group": "C",
+      "homeTeam": {
+        "name": "Haiti",
+        "fifaCode": "HAI",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Scotland",
+        "fifaCode": "SCO",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-14T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-14T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-13T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-13",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Boston Stadium",
+        "city": "Foxborough",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M008",
+      "matchNumber": 8,
+      "stage": "Group Stage",
+      "group": "D",
+      "homeTeam": {
+        "name": "Australia",
+        "fifaCode": "AUS",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Türkiye",
+        "fifaCode": "TUR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-14T05:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-14T04:00:00Z",
+        "mexicoCityDateTime": "2026-06-13T22:00:00-06:00",
+        "mexicoCityDate": "2026-06-13",
+        "mexicoCityTime": "22:00"
+      },
+      "venue": {
+        "stadium": "BC Place Vancouver",
+        "city": "Vancouver",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M009",
+      "matchNumber": 9,
+      "stage": "Group Stage",
+      "group": "E",
+      "homeTeam": {
+        "name": "Germany",
+        "fifaCode": "GER",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Curaçao",
+        "fifaCode": "CUW",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-14T18:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-14T17:00:00Z",
+        "mexicoCityDateTime": "2026-06-14T11:00:00-06:00",
+        "mexicoCityDate": "2026-06-14",
+        "mexicoCityTime": "11:00"
+      },
+      "venue": {
+        "stadium": "Houston Stadium",
+        "city": "Houston",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M010",
+      "matchNumber": 10,
+      "stage": "Group Stage",
+      "group": "F",
+      "homeTeam": {
+        "name": "Netherlands",
+        "fifaCode": "NED",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Japan",
+        "fifaCode": "JPN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-14T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-14T20:00:00Z",
+        "mexicoCityDateTime": "2026-06-14T14:00:00-06:00",
+        "mexicoCityDate": "2026-06-14",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M011",
+      "matchNumber": 11,
+      "stage": "Group Stage",
+      "group": "E",
+      "homeTeam": {
+        "name": "Côte d'Ivoire",
+        "fifaCode": "CIV",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Ecuador",
+        "fifaCode": "ECU",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-15T00:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-14T23:00:00Z",
+        "mexicoCityDateTime": "2026-06-14T17:00:00-06:00",
+        "mexicoCityDate": "2026-06-14",
+        "mexicoCityTime": "17:00"
+      },
+      "venue": {
+        "stadium": "Philadelphia Stadium",
+        "city": "Philadelphia",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M012",
+      "matchNumber": 12,
+      "stage": "Group Stage",
+      "group": "F",
+      "homeTeam": {
+        "name": "Sweden",
+        "fifaCode": "SWE",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Tunisia",
+        "fifaCode": "TUN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-15T03:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-15T02:00:00Z",
+        "mexicoCityDateTime": "2026-06-14T20:00:00-06:00",
+        "mexicoCityDate": "2026-06-14",
+        "mexicoCityTime": "20:00"
+      },
+      "venue": {
+        "stadium": "Monterrey Stadium",
+        "city": "Guadalupe",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M013",
+      "matchNumber": 13,
+      "stage": "Group Stage",
+      "group": "H",
+      "homeTeam": {
+        "name": "Spain",
+        "fifaCode": "ESP",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Cape Verde",
+        "fifaCode": "CPV",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-15T17:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-15T16:00:00Z",
+        "mexicoCityDateTime": "2026-06-15T10:00:00-06:00",
+        "mexicoCityDate": "2026-06-15",
+        "mexicoCityTime": "10:00"
+      },
+      "venue": {
+        "stadium": "Atlanta Stadium",
+        "city": "Atlanta",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M014",
+      "matchNumber": 14,
+      "stage": "Group Stage",
+      "group": "G",
+      "homeTeam": {
+        "name": "Belgium",
+        "fifaCode": "BEL",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Egypt",
+        "fifaCode": "EGY",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-15T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-15T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-15T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-15",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Seattle Stadium",
+        "city": "Seattle",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M015",
+      "matchNumber": 15,
+      "stage": "Group Stage",
+      "group": "H",
+      "homeTeam": {
+        "name": "Saudi Arabia",
+        "fifaCode": "KSA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Uruguay",
+        "fifaCode": "URU",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-15T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-15T22:00:00Z",
+        "mexicoCityDateTime": "2026-06-15T16:00:00-06:00",
+        "mexicoCityDate": "2026-06-15",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "Miami Stadium",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M016",
+      "matchNumber": 16,
+      "stage": "Group Stage",
+      "group": "G",
+      "homeTeam": {
+        "name": "IR Iran",
+        "fifaCode": "IRN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "New Zealand",
+        "fifaCode": "NZL",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-16T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-16T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-15T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-15",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M017",
+      "matchNumber": 17,
+      "stage": "Group Stage",
+      "group": "I",
+      "homeTeam": {
+        "name": "France",
+        "fifaCode": "FRA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Senegal",
+        "fifaCode": "SEN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-16T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-16T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-16T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-16",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "New York New Jersey Stadium",
+        "city": "New Jersey",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M018",
+      "matchNumber": 18,
+      "stage": "Group Stage",
+      "group": "I",
+      "homeTeam": {
+        "name": "Iraq",
+        "fifaCode": "IRQ",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Norway",
+        "fifaCode": "NOR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-16T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-16T22:00:00Z",
+        "mexicoCityDateTime": "2026-06-16T16:00:00-06:00",
+        "mexicoCityDate": "2026-06-16",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "Boston Stadium",
+        "city": "Foxborough",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M019",
+      "matchNumber": 19,
+      "stage": "Group Stage",
+      "group": "J",
+      "homeTeam": {
+        "name": "Argentina",
+        "fifaCode": "ARG",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Algeria",
+        "fifaCode": "ALG",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-17T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-17T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-16T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-16",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Kansas City Stadium",
+        "city": "Kansas City",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M020",
+      "matchNumber": 20,
+      "stage": "Group Stage",
+      "group": "J",
+      "homeTeam": {
+        "name": "Austria",
+        "fifaCode": "AUT",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Jordan",
+        "fifaCode": "JOR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-17T05:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-17T04:00:00Z",
+        "mexicoCityDateTime": "2026-06-16T22:00:00-06:00",
+        "mexicoCityDate": "2026-06-16",
+        "mexicoCityTime": "22:00"
+      },
+      "venue": {
+        "stadium": "San Francisco Bay Area Stadium",
+        "city": "Santa Clara",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M021",
+      "matchNumber": 21,
+      "stage": "Group Stage",
+      "group": "K",
+      "homeTeam": {
+        "name": "Portugal",
+        "fifaCode": "POR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Congo DR",
+        "fifaCode": "COD",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-17T18:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-17T17:00:00Z",
+        "mexicoCityDateTime": "2026-06-17T11:00:00-06:00",
+        "mexicoCityDate": "2026-06-17",
+        "mexicoCityTime": "11:00"
+      },
+      "venue": {
+        "stadium": "Houston Stadium",
+        "city": "Houston",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M022",
+      "matchNumber": 22,
+      "stage": "Group Stage",
+      "group": "L",
+      "homeTeam": {
+        "name": "England",
+        "fifaCode": "ENG",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Croatia",
+        "fifaCode": "CRO",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-17T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-17T20:00:00Z",
+        "mexicoCityDateTime": "2026-06-17T14:00:00-06:00",
+        "mexicoCityDate": "2026-06-17",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M023",
+      "matchNumber": 23,
+      "stage": "Group Stage",
+      "group": "L",
+      "homeTeam": {
+        "name": "Ghana",
+        "fifaCode": "GHA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Panama",
+        "fifaCode": "PAN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-18T00:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-17T23:00:00Z",
+        "mexicoCityDateTime": "2026-06-17T17:00:00-06:00",
+        "mexicoCityDate": "2026-06-17",
+        "mexicoCityTime": "17:00"
+      },
+      "venue": {
+        "stadium": "Toronto Stadium",
+        "city": "Toronto",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M024",
+      "matchNumber": 24,
+      "stage": "Group Stage",
+      "group": "K",
+      "homeTeam": {
+        "name": "Uzbekistan",
+        "fifaCode": "UZB",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Colombia",
+        "fifaCode": "COL",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-18T03:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-18T02:00:00Z",
+        "mexicoCityDateTime": "2026-06-17T20:00:00-06:00",
+        "mexicoCityDate": "2026-06-17",
+        "mexicoCityTime": "20:00"
+      },
+      "venue": {
+        "stadium": "Mexico City Stadium",
+        "city": "Mexico City",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M025",
+      "matchNumber": 25,
+      "stage": "Group Stage",
+      "group": "A",
+      "homeTeam": {
+        "name": "Czechia",
+        "fifaCode": "CZE",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "South Africa",
+        "fifaCode": "RSA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-18T17:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-18T16:00:00Z",
+        "mexicoCityDateTime": "2026-06-18T10:00:00-06:00",
+        "mexicoCityDate": "2026-06-18",
+        "mexicoCityTime": "10:00"
+      },
+      "venue": {
+        "stadium": "Atlanta Stadium",
+        "city": "Atlanta",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M026",
+      "matchNumber": 26,
+      "stage": "Group Stage",
+      "group": "B",
+      "homeTeam": {
+        "name": "Switzerland",
+        "fifaCode": "SUI",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Bosnia and Herzegovina",
+        "fifaCode": "BIH",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-18T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-18T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-18T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-18",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M027",
+      "matchNumber": 27,
+      "stage": "Group Stage",
+      "group": "B",
+      "homeTeam": {
+        "name": "Canada",
+        "fifaCode": "CAN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Qatar",
+        "fifaCode": "QAT",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-18T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-18T22:00:00Z",
+        "mexicoCityDateTime": "2026-06-18T16:00:00-06:00",
+        "mexicoCityDate": "2026-06-18",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "BC Place Vancouver",
+        "city": "Vancouver",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M028",
+      "matchNumber": 28,
+      "stage": "Group Stage",
+      "group": "A",
+      "homeTeam": {
+        "name": "Mexico",
+        "fifaCode": "MEX",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Korea Republic",
+        "fifaCode": "KOR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-19T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-19T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-18T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-18",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Guadalajara Stadium",
+        "city": "Zapopan",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M029",
+      "matchNumber": 29,
+      "stage": "Group Stage",
+      "group": "D",
+      "homeTeam": {
+        "name": "USA",
+        "fifaCode": "USA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Australia",
+        "fifaCode": "AUS",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-19T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-19T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-19T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-19",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Seattle Stadium",
+        "city": "Seattle",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M030",
+      "matchNumber": 30,
+      "stage": "Group Stage",
+      "group": "C",
+      "homeTeam": {
+        "name": "Scotland",
+        "fifaCode": "SCO",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Morocco",
+        "fifaCode": "MAR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-19T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-19T22:00:00Z",
+        "mexicoCityDateTime": "2026-06-19T16:00:00-06:00",
+        "mexicoCityDate": "2026-06-19",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "Boston Stadium",
+        "city": "Foxborough",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M031",
+      "matchNumber": 31,
+      "stage": "Group Stage",
+      "group": "C",
+      "homeTeam": {
+        "name": "Brazil",
+        "fifaCode": "BRA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Haiti",
+        "fifaCode": "HAI",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-20T01:30:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-20T00:30:00Z",
+        "mexicoCityDateTime": "2026-06-19T18:30:00-06:00",
+        "mexicoCityDate": "2026-06-19",
+        "mexicoCityTime": "18:30"
+      },
+      "venue": {
+        "stadium": "Philadelphia Stadium",
+        "city": "Philadelphia",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M032",
+      "matchNumber": 32,
+      "stage": "Group Stage",
+      "group": "D",
+      "homeTeam": {
+        "name": "Türkiye",
+        "fifaCode": "TUR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Paraguay",
+        "fifaCode": "PAR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-20T04:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-20T03:00:00Z",
+        "mexicoCityDateTime": "2026-06-19T21:00:00-06:00",
+        "mexicoCityDate": "2026-06-19",
+        "mexicoCityTime": "21:00"
+      },
+      "venue": {
+        "stadium": "San Francisco Bay Area Stadium",
+        "city": "Santa Clara",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M033",
+      "matchNumber": 33,
+      "stage": "Group Stage",
+      "group": "F",
+      "homeTeam": {
+        "name": "Netherlands",
+        "fifaCode": "NED",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Sweden",
+        "fifaCode": "SWE",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-20T18:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-20T17:00:00Z",
+        "mexicoCityDateTime": "2026-06-20T11:00:00-06:00",
+        "mexicoCityDate": "2026-06-20",
+        "mexicoCityTime": "11:00"
+      },
+      "venue": {
+        "stadium": "Houston Stadium",
+        "city": "Houston",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M034",
+      "matchNumber": 34,
+      "stage": "Group Stage",
+      "group": "E",
+      "homeTeam": {
+        "name": "Germany",
+        "fifaCode": "GER",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Côte d'Ivoire",
+        "fifaCode": "CIV",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-20T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-20T20:00:00Z",
+        "mexicoCityDateTime": "2026-06-20T14:00:00-06:00",
+        "mexicoCityDate": "2026-06-20",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "Toronto Stadium",
+        "city": "Toronto",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M035",
+      "matchNumber": 35,
+      "stage": "Group Stage",
+      "group": "E",
+      "homeTeam": {
+        "name": "Ecuador",
+        "fifaCode": "ECU",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Curaçao",
+        "fifaCode": "CUW",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-21T01:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-21T00:00:00Z",
+        "mexicoCityDateTime": "2026-06-20T18:00:00-06:00",
+        "mexicoCityDate": "2026-06-20",
+        "mexicoCityTime": "18:00"
+      },
+      "venue": {
+        "stadium": "Kansas City Stadium",
+        "city": "Kansas City",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M036",
+      "matchNumber": 36,
+      "stage": "Group Stage",
+      "group": "F",
+      "homeTeam": {
+        "name": "Tunisia",
+        "fifaCode": "TUN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Japan",
+        "fifaCode": "JPN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-21T05:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-21T04:00:00Z",
+        "mexicoCityDateTime": "2026-06-20T22:00:00-06:00",
+        "mexicoCityDate": "2026-06-20",
+        "mexicoCityTime": "22:00"
+      },
+      "venue": {
+        "stadium": "Monterrey Stadium",
+        "city": "Guadalupe",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M037",
+      "matchNumber": 37,
+      "stage": "Group Stage",
+      "group": "H",
+      "homeTeam": {
+        "name": "Spain",
+        "fifaCode": "ESP",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Saudi Arabia",
+        "fifaCode": "KSA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-21T17:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-21T16:00:00Z",
+        "mexicoCityDateTime": "2026-06-21T10:00:00-06:00",
+        "mexicoCityDate": "2026-06-21",
+        "mexicoCityTime": "10:00"
+      },
+      "venue": {
+        "stadium": "Atlanta Stadium",
+        "city": "Atlanta",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M038",
+      "matchNumber": 38,
+      "stage": "Group Stage",
+      "group": "G",
+      "homeTeam": {
+        "name": "Belgium",
+        "fifaCode": "BEL",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "IR Iran",
+        "fifaCode": "IRN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-21T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-21T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-21T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-21",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M039",
+      "matchNumber": 39,
+      "stage": "Group Stage",
+      "group": "H",
+      "homeTeam": {
+        "name": "Uruguay",
+        "fifaCode": "URU",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Cape Verde",
+        "fifaCode": "CPV",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-21T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-21T22:00:00Z",
+        "mexicoCityDateTime": "2026-06-21T16:00:00-06:00",
+        "mexicoCityDate": "2026-06-21",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "Miami Stadium",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M040",
+      "matchNumber": 40,
+      "stage": "Group Stage",
+      "group": "G",
+      "homeTeam": {
+        "name": "New Zealand",
+        "fifaCode": "NZL",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Egypt",
+        "fifaCode": "EGY",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-22T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-22T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-21T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-21",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "BC Place Vancouver",
+        "city": "Vancouver",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M041",
+      "matchNumber": 41,
+      "stage": "Group Stage",
+      "group": "J",
+      "homeTeam": {
+        "name": "Argentina",
+        "fifaCode": "ARG",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Austria",
+        "fifaCode": "AUT",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-22T18:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-22T17:00:00Z",
+        "mexicoCityDateTime": "2026-06-22T11:00:00-06:00",
+        "mexicoCityDate": "2026-06-22",
+        "mexicoCityTime": "11:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M042",
+      "matchNumber": 42,
+      "stage": "Group Stage",
+      "group": "I",
+      "homeTeam": {
+        "name": "France",
+        "fifaCode": "FRA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Iraq",
+        "fifaCode": "IRQ",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-22T22:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-22T21:00:00Z",
+        "mexicoCityDateTime": "2026-06-22T15:00:00-06:00",
+        "mexicoCityDate": "2026-06-22",
+        "mexicoCityTime": "15:00"
+      },
+      "venue": {
+        "stadium": "Philadelphia Stadium",
+        "city": "Philadelphia",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M043",
+      "matchNumber": 43,
+      "stage": "Group Stage",
+      "group": "I",
+      "homeTeam": {
+        "name": "Norway",
+        "fifaCode": "NOR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Senegal",
+        "fifaCode": "SEN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-23T01:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-23T00:00:00Z",
+        "mexicoCityDateTime": "2026-06-22T18:00:00-06:00",
+        "mexicoCityDate": "2026-06-22",
+        "mexicoCityTime": "18:00"
+      },
+      "venue": {
+        "stadium": "Toronto Stadium",
+        "city": "Toronto",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M044",
+      "matchNumber": 44,
+      "stage": "Group Stage",
+      "group": "J",
+      "homeTeam": {
+        "name": "Jordan",
+        "fifaCode": "JOR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Algeria",
+        "fifaCode": "ALG",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-23T04:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-23T03:00:00Z",
+        "mexicoCityDateTime": "2026-06-22T21:00:00-06:00",
+        "mexicoCityDate": "2026-06-22",
+        "mexicoCityTime": "21:00"
+      },
+      "venue": {
+        "stadium": "San Francisco Bay Area Stadium",
+        "city": "Santa Clara",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M045",
+      "matchNumber": 45,
+      "stage": "Group Stage",
+      "group": "K",
+      "homeTeam": {
+        "name": "Portugal",
+        "fifaCode": "POR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Uzbekistan",
+        "fifaCode": "UZB",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-23T18:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-23T17:00:00Z",
+        "mexicoCityDateTime": "2026-06-23T11:00:00-06:00",
+        "mexicoCityDate": "2026-06-23",
+        "mexicoCityTime": "11:00"
+      },
+      "venue": {
+        "stadium": "Houston Stadium",
+        "city": "Houston",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M046",
+      "matchNumber": 46,
+      "stage": "Group Stage",
+      "group": "L",
+      "homeTeam": {
+        "name": "England",
+        "fifaCode": "ENG",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Ghana",
+        "fifaCode": "GHA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-23T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-23T20:00:00Z",
+        "mexicoCityDateTime": "2026-06-23T14:00:00-06:00",
+        "mexicoCityDate": "2026-06-23",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "Boston Stadium",
+        "city": "Foxborough",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M047",
+      "matchNumber": 47,
+      "stage": "Group Stage",
+      "group": "L",
+      "homeTeam": {
+        "name": "Panama",
+        "fifaCode": "PAN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Croatia",
+        "fifaCode": "CRO",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-24T00:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-23T23:00:00Z",
+        "mexicoCityDateTime": "2026-06-23T17:00:00-06:00",
+        "mexicoCityDate": "2026-06-23",
+        "mexicoCityTime": "17:00"
+      },
+      "venue": {
+        "stadium": "Boston Stadium",
+        "city": "Foxborough",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M048",
+      "matchNumber": 48,
+      "stage": "Group Stage",
+      "group": "K",
+      "homeTeam": {
+        "name": "Colombia",
+        "fifaCode": "COL",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Congo DR",
+        "fifaCode": "COD",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-24T03:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-24T02:00:00Z",
+        "mexicoCityDateTime": "2026-06-23T20:00:00-06:00",
+        "mexicoCityDate": "2026-06-23",
+        "mexicoCityTime": "20:00"
+      },
+      "venue": {
+        "stadium": "Guadalajara Stadium",
+        "city": "Zapopan",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M049",
+      "matchNumber": 49,
+      "stage": "Group Stage",
+      "group": "B",
+      "homeTeam": {
+        "name": "Switzerland",
+        "fifaCode": "SUI",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Canada",
+        "fifaCode": "CAN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-24T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-24T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-24T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-24",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "BC Place Vancouver",
+        "city": "Vancouver",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M050",
+      "matchNumber": 50,
+      "stage": "Group Stage",
+      "group": "B",
+      "homeTeam": {
+        "name": "Bosnia and Herzegovina",
+        "fifaCode": "BIH",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Qatar",
+        "fifaCode": "QAT",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-24T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-24T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-24T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-24",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Seattle Stadium",
+        "city": "Seattle",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M051",
+      "matchNumber": 51,
+      "stage": "Group Stage",
+      "group": "C",
+      "homeTeam": {
+        "name": "Morocco",
+        "fifaCode": "MAR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Haiti",
+        "fifaCode": "HAI",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-24T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-24T22:00:00Z",
+        "mexicoCityDateTime": "2026-06-24T16:00:00-06:00",
+        "mexicoCityDate": "2026-06-24",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "Atlanta Stadium",
+        "city": "Atlanta",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M052",
+      "matchNumber": 52,
+      "stage": "Group Stage",
+      "group": "C",
+      "homeTeam": {
+        "name": "Scotland",
+        "fifaCode": "SCO",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Brazil",
+        "fifaCode": "BRA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-24T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-24T22:00:00Z",
+        "mexicoCityDateTime": "2026-06-24T16:00:00-06:00",
+        "mexicoCityDate": "2026-06-24",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "Miami Stadium",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M053",
+      "matchNumber": 53,
+      "stage": "Group Stage",
+      "group": "A",
+      "homeTeam": {
+        "name": "South Africa",
+        "fifaCode": "RSA",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Korea Republic",
+        "fifaCode": "KOR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-25T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-25T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-24T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-24",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Monterrey Stadium",
+        "city": "Guadalupe",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M054",
+      "matchNumber": 54,
+      "stage": "Group Stage",
+      "group": "A",
+      "homeTeam": {
+        "name": "Czechia",
+        "fifaCode": "CZE",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Mexico",
+        "fifaCode": "MEX",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-25T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-25T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-24T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-24",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Mexico City Stadium",
+        "city": "Mexico City",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M055",
+      "matchNumber": 55,
+      "stage": "Group Stage",
+      "group": "E",
+      "homeTeam": {
+        "name": "Curaçao",
+        "fifaCode": "CUW",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Côte d'Ivoire",
+        "fifaCode": "CIV",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-25T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-25T20:00:00Z",
+        "mexicoCityDateTime": "2026-06-25T14:00:00-06:00",
+        "mexicoCityDate": "2026-06-25",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "Philadelphia Stadium",
+        "city": "Philadelphia",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M056",
+      "matchNumber": 56,
+      "stage": "Group Stage",
+      "group": "E",
+      "homeTeam": {
+        "name": "Ecuador",
+        "fifaCode": "ECU",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Germany",
+        "fifaCode": "GER",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-25T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-25T20:00:00Z",
+        "mexicoCityDateTime": "2026-06-25T14:00:00-06:00",
+        "mexicoCityDate": "2026-06-25",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "New York New Jersey Stadium",
+        "city": "New Jersey",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M057",
+      "matchNumber": 57,
+      "stage": "Group Stage",
+      "group": "F",
+      "homeTeam": {
+        "name": "Tunisia",
+        "fifaCode": "TUN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Netherlands",
+        "fifaCode": "NED",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-26T00:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-25T23:00:00Z",
+        "mexicoCityDateTime": "2026-06-25T17:00:00-06:00",
+        "mexicoCityDate": "2026-06-25",
+        "mexicoCityTime": "17:00"
+      },
+      "venue": {
+        "stadium": "Kansas City Stadium",
+        "city": "Kansas City",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M058",
+      "matchNumber": 58,
+      "stage": "Group Stage",
+      "group": "F",
+      "homeTeam": {
+        "name": "Japan",
+        "fifaCode": "JPN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Sweden",
+        "fifaCode": "SWE",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-26T00:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-25T23:00:00Z",
+        "mexicoCityDateTime": "2026-06-25T17:00:00-06:00",
+        "mexicoCityDate": "2026-06-25",
+        "mexicoCityTime": "17:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M059",
+      "matchNumber": 59,
+      "stage": "Group Stage",
+      "group": "D",
+      "homeTeam": {
+        "name": "Türkiye",
+        "fifaCode": "TUR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "USA",
+        "fifaCode": "USA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-26T03:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-26T02:00:00Z",
+        "mexicoCityDateTime": "2026-06-25T20:00:00-06:00",
+        "mexicoCityDate": "2026-06-25",
+        "mexicoCityTime": "20:00"
+      },
+      "venue": {
+        "stadium": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M060",
+      "matchNumber": 60,
+      "stage": "Group Stage",
+      "group": "D",
+      "homeTeam": {
+        "name": "Paraguay",
+        "fifaCode": "PAR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Australia",
+        "fifaCode": "AUS",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-26T03:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-26T02:00:00Z",
+        "mexicoCityDateTime": "2026-06-25T20:00:00-06:00",
+        "mexicoCityDate": "2026-06-25",
+        "mexicoCityTime": "20:00"
+      },
+      "venue": {
+        "stadium": "San Francisco Bay Area Stadium",
+        "city": "Santa Clara",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M061",
+      "matchNumber": 61,
+      "stage": "Group Stage",
+      "group": "I",
+      "homeTeam": {
+        "name": "Norway",
+        "fifaCode": "NOR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "France",
+        "fifaCode": "FRA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-26T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-26T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-26T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-26",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Boston Stadium",
+        "city": "Foxborough",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M062",
+      "matchNumber": 62,
+      "stage": "Group Stage",
+      "group": "I",
+      "homeTeam": {
+        "name": "Senegal",
+        "fifaCode": "SEN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Iraq",
+        "fifaCode": "IRQ",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-26T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-26T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-26T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-26",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Toronto Stadium",
+        "city": "Toronto",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M063",
+      "matchNumber": 63,
+      "stage": "Group Stage",
+      "group": "H",
+      "homeTeam": {
+        "name": "Cape Verde",
+        "fifaCode": "CPV",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Saudi Arabia",
+        "fifaCode": "KSA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-27T01:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-27T00:00:00Z",
+        "mexicoCityDateTime": "2026-06-26T18:00:00-06:00",
+        "mexicoCityDate": "2026-06-26",
+        "mexicoCityTime": "18:00"
+      },
+      "venue": {
+        "stadium": "Houston Stadium",
+        "city": "Houston",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M064",
+      "matchNumber": 64,
+      "stage": "Group Stage",
+      "group": "H",
+      "homeTeam": {
+        "name": "Uruguay",
+        "fifaCode": "URU",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Spain",
+        "fifaCode": "ESP",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-27T01:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-27T00:00:00Z",
+        "mexicoCityDateTime": "2026-06-26T18:00:00-06:00",
+        "mexicoCityDate": "2026-06-26",
+        "mexicoCityTime": "18:00"
+      },
+      "venue": {
+        "stadium": "Guadalajara Stadium",
+        "city": "Zapopan",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M065",
+      "matchNumber": 65,
+      "stage": "Group Stage",
+      "group": "G",
+      "homeTeam": {
+        "name": "New Zealand",
+        "fifaCode": "NZL",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Belgium",
+        "fifaCode": "BEL",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-27T04:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-27T03:00:00Z",
+        "mexicoCityDateTime": "2026-06-26T21:00:00-06:00",
+        "mexicoCityDate": "2026-06-26",
+        "mexicoCityTime": "21:00"
+      },
+      "venue": {
+        "stadium": "BC Place Vancouver",
+        "city": "Vancouver",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M066",
+      "matchNumber": 66,
+      "stage": "Group Stage",
+      "group": "G",
+      "homeTeam": {
+        "name": "Egypt",
+        "fifaCode": "EGY",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "IR Iran",
+        "fifaCode": "IRN",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-27T04:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-27T03:00:00Z",
+        "mexicoCityDateTime": "2026-06-26T21:00:00-06:00",
+        "mexicoCityDate": "2026-06-26",
+        "mexicoCityTime": "21:00"
+      },
+      "venue": {
+        "stadium": "Seattle Stadium",
+        "city": "Seattle",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M067",
+      "matchNumber": 67,
+      "stage": "Group Stage",
+      "group": "L",
+      "homeTeam": {
+        "name": "Panama",
+        "fifaCode": "PAN",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "England",
+        "fifaCode": "ENG",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-27T22:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-27T21:00:00Z",
+        "mexicoCityDateTime": "2026-06-27T15:00:00-06:00",
+        "mexicoCityDate": "2026-06-27",
+        "mexicoCityTime": "15:00"
+      },
+      "venue": {
+        "stadium": "New York New Jersey Stadium",
+        "city": "New Jersey",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M068",
+      "matchNumber": 68,
+      "stage": "Group Stage",
+      "group": "L",
+      "homeTeam": {
+        "name": "Croatia",
+        "fifaCode": "CRO",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Ghana",
+        "fifaCode": "GHA",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-27T22:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-27T21:00:00Z",
+        "mexicoCityDateTime": "2026-06-27T15:00:00-06:00",
+        "mexicoCityDate": "2026-06-27",
+        "mexicoCityTime": "15:00"
+      },
+      "venue": {
+        "stadium": "Philadelphia Stadium",
+        "city": "Philadelphia",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M069",
+      "matchNumber": 69,
+      "stage": "Group Stage",
+      "group": "K",
+      "homeTeam": {
+        "name": "Colombia",
+        "fifaCode": "COL",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Portugal",
+        "fifaCode": "POR",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-28T00:30:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-27T23:30:00Z",
+        "mexicoCityDateTime": "2026-06-27T17:30:00-06:00",
+        "mexicoCityDate": "2026-06-27",
+        "mexicoCityTime": "17:30"
+      },
+      "venue": {
+        "stadium": "Miami Stadium",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M070",
+      "matchNumber": 70,
+      "stage": "Group Stage",
+      "group": "K",
+      "homeTeam": {
+        "name": "Congo DR",
+        "fifaCode": "COD",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Uzbekistan",
+        "fifaCode": "UZB",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-28T00:30:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-27T23:30:00Z",
+        "mexicoCityDateTime": "2026-06-27T17:30:00-06:00",
+        "mexicoCityDate": "2026-06-27",
+        "mexicoCityTime": "17:30"
+      },
+      "venue": {
+        "stadium": "Atlanta Stadium",
+        "city": "Atlanta",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M071",
+      "matchNumber": 71,
+      "stage": "Group Stage",
+      "group": "J",
+      "homeTeam": {
+        "name": "Algeria",
+        "fifaCode": "ALG",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Austria",
+        "fifaCode": "AUT",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-28T03:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-28T02:00:00Z",
+        "mexicoCityDateTime": "2026-06-27T20:00:00-06:00",
+        "mexicoCityDate": "2026-06-27",
+        "mexicoCityTime": "20:00"
+      },
+      "venue": {
+        "stadium": "Kansas City Stadium",
+        "city": "Kansas City",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M072",
+      "matchNumber": 72,
+      "stage": "Group Stage",
+      "group": "J",
+      "homeTeam": {
+        "name": "Jordan",
+        "fifaCode": "JOR",
+        "type": "team"
+      },
+      "awayTeam": {
+        "name": "Argentina",
+        "fifaCode": "ARG",
+        "type": "team"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-28T03:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-28T02:00:00Z",
+        "mexicoCityDateTime": "2026-06-27T20:00:00-06:00",
+        "mexicoCityDate": "2026-06-27",
+        "mexicoCityTime": "20:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M073",
+      "matchNumber": 73,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group A runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group B runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-28T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-28T19:00:00Z",
+        "mexicoCityDateTime": "2026-06-28T13:00:00-06:00",
+        "mexicoCityDate": "2026-06-28",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M074",
+      "matchNumber": 74,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group E winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group A/B/C/D/F third place",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-29T21:30:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-29T20:30:00Z",
+        "mexicoCityDateTime": "2026-06-29T14:30:00-06:00",
+        "mexicoCityDate": "2026-06-29",
+        "mexicoCityTime": "14:30"
+      },
+      "venue": {
+        "stadium": "Boston Stadium",
+        "city": "Foxborough",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M075",
+      "matchNumber": 75,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group F winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group C runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-30T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-30T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-29T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-29",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Monterrey Stadium",
+        "city": "Guadalupe",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M076",
+      "matchNumber": 76,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group C winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group F runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-29T18:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-29T17:00:00Z",
+        "mexicoCityDateTime": "2026-06-29T11:00:00-06:00",
+        "mexicoCityDate": "2026-06-29",
+        "mexicoCityTime": "11:00"
+      },
+      "venue": {
+        "stadium": "Houston Stadium",
+        "city": "Houston",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M077",
+      "matchNumber": 77,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group I winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group C/D/F/G/H third place",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-30T22:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-30T21:00:00Z",
+        "mexicoCityDateTime": "2026-06-30T15:00:00-06:00",
+        "mexicoCityDate": "2026-06-30",
+        "mexicoCityTime": "15:00"
+      },
+      "venue": {
+        "stadium": "New York New Jersey Stadium",
+        "city": "New Jersey",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M078",
+      "matchNumber": 78,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group E runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group I runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-06-30T18:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-06-30T17:00:00Z",
+        "mexicoCityDateTime": "2026-06-30T11:00:00-06:00",
+        "mexicoCityDate": "2026-06-30",
+        "mexicoCityTime": "11:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M079",
+      "matchNumber": 79,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group A winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group C/E/F/H/I third place",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-01T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-01T01:00:00Z",
+        "mexicoCityDateTime": "2026-06-30T19:00:00-06:00",
+        "mexicoCityDate": "2026-06-30",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Mexico City Stadium",
+        "city": "Mexico City",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M080",
+      "matchNumber": 80,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group L winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group E/H/I/J/K third place",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-01T17:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-01T16:00:00Z",
+        "mexicoCityDateTime": "2026-07-01T10:00:00-06:00",
+        "mexicoCityDate": "2026-07-01",
+        "mexicoCityTime": "10:00"
+      },
+      "venue": {
+        "stadium": "Atlanta Stadium",
+        "city": "Atlanta",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M081",
+      "matchNumber": 81,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group D winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group B/E/F/I/J third place",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-02T01:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-02T00:00:00Z",
+        "mexicoCityDateTime": "2026-07-01T18:00:00-06:00",
+        "mexicoCityDate": "2026-07-01",
+        "mexicoCityTime": "18:00"
+      },
+      "venue": {
+        "stadium": "San Francisco Bay Area Stadium",
+        "city": "Santa Clara",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M082",
+      "matchNumber": 82,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group G winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group A/E/H/I/J third place",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-01T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-01T20:00:00Z",
+        "mexicoCityDateTime": "2026-07-01T14:00:00-06:00",
+        "mexicoCityDate": "2026-07-01",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "Seattle Stadium",
+        "city": "Seattle",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M083",
+      "matchNumber": 83,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group K runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group L runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-03T00:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-02T23:00:00Z",
+        "mexicoCityDateTime": "2026-07-02T17:00:00-06:00",
+        "mexicoCityDate": "2026-07-02",
+        "mexicoCityTime": "17:00"
+      },
+      "venue": {
+        "stadium": "Toronto Stadium",
+        "city": "Toronto",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M084",
+      "matchNumber": 84,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group H winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group J runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-02T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-02T19:00:00Z",
+        "mexicoCityDateTime": "2026-07-02T13:00:00-06:00",
+        "mexicoCityDate": "2026-07-02",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M085",
+      "matchNumber": 85,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group B winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group E/F/G/I/J third place",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-03T04:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-03T03:00:00Z",
+        "mexicoCityDateTime": "2026-07-02T21:00:00-06:00",
+        "mexicoCityDate": "2026-07-02",
+        "mexicoCityTime": "21:00"
+      },
+      "venue": {
+        "stadium": "BC Place Vancouver",
+        "city": "Vancouver",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M086",
+      "matchNumber": 86,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group J winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group H runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-03T23:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-03T22:00:00Z",
+        "mexicoCityDateTime": "2026-07-03T16:00:00-06:00",
+        "mexicoCityDate": "2026-07-03",
+        "mexicoCityTime": "16:00"
+      },
+      "venue": {
+        "stadium": "Miami Stadium",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M087",
+      "matchNumber": 87,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group K winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group D/E/I/J/L third place",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-04T02:30:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-04T01:30:00Z",
+        "mexicoCityDateTime": "2026-07-03T19:30:00-06:00",
+        "mexicoCityDate": "2026-07-03",
+        "mexicoCityTime": "19:30"
+      },
+      "venue": {
+        "stadium": "Kansas City Stadium",
+        "city": "Kansas City",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M088",
+      "matchNumber": 88,
+      "stage": "Round of 32",
+      "group": null,
+      "homeTeam": {
+        "name": "Group D runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Group G runners-up",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-03T19:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-03T18:00:00Z",
+        "mexicoCityDateTime": "2026-07-03T12:00:00-06:00",
+        "mexicoCityDate": "2026-07-03",
+        "mexicoCityTime": "12:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M089",
+      "matchNumber": 89,
+      "stage": "Round of 16",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 74 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 77 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-04T22:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-04T21:00:00Z",
+        "mexicoCityDateTime": "2026-07-04T15:00:00-06:00",
+        "mexicoCityDate": "2026-07-04",
+        "mexicoCityTime": "15:00"
+      },
+      "venue": {
+        "stadium": "Philadelphia Stadium",
+        "city": "Philadelphia",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M090",
+      "matchNumber": 90,
+      "stage": "Round of 16",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 73 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 75 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-04T18:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-04T17:00:00Z",
+        "mexicoCityDateTime": "2026-07-04T11:00:00-06:00",
+        "mexicoCityDate": "2026-07-04",
+        "mexicoCityTime": "11:00"
+      },
+      "venue": {
+        "stadium": "Houston Stadium",
+        "city": "Houston",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M091",
+      "matchNumber": 91,
+      "stage": "Round of 16",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 76 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 78 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-05T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-05T20:00:00Z",
+        "mexicoCityDateTime": "2026-07-05T14:00:00-06:00",
+        "mexicoCityDate": "2026-07-05",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "New York New Jersey Stadium",
+        "city": "New Jersey",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M092",
+      "matchNumber": 92,
+      "stage": "Round of 16",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 79 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 80 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-06T01:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-06T00:00:00Z",
+        "mexicoCityDateTime": "2026-07-05T18:00:00-06:00",
+        "mexicoCityDate": "2026-07-05",
+        "mexicoCityTime": "18:00"
+      },
+      "venue": {
+        "stadium": "Mexico City Stadium",
+        "city": "Mexico City",
+        "country": "Mexico"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M093",
+      "matchNumber": 93,
+      "stage": "Round of 16",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 83 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 84 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-06T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-06T19:00:00Z",
+        "mexicoCityDateTime": "2026-07-06T13:00:00-06:00",
+        "mexicoCityDate": "2026-07-06",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M094",
+      "matchNumber": 94,
+      "stage": "Round of 16",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 81 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 82 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-07T01:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-07T00:00:00Z",
+        "mexicoCityDateTime": "2026-07-06T18:00:00-06:00",
+        "mexicoCityDate": "2026-07-06",
+        "mexicoCityTime": "18:00"
+      },
+      "venue": {
+        "stadium": "Seattle Stadium",
+        "city": "Seattle",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M095",
+      "matchNumber": 95,
+      "stage": "Round of 16",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 86 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 88 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-07T17:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-07T16:00:00Z",
+        "mexicoCityDateTime": "2026-07-07T10:00:00-06:00",
+        "mexicoCityDate": "2026-07-07",
+        "mexicoCityTime": "10:00"
+      },
+      "venue": {
+        "stadium": "Atlanta Stadium",
+        "city": "Atlanta",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M096",
+      "matchNumber": 96,
+      "stage": "Round of 16",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 85 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 87 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-07T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-07T20:00:00Z",
+        "mexicoCityDateTime": "2026-07-07T14:00:00-06:00",
+        "mexicoCityDate": "2026-07-07",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "BC Place Vancouver",
+        "city": "Vancouver",
+        "country": "Canada"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M097",
+      "matchNumber": 97,
+      "stage": "Quarter-final",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 89 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 90 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-09T21:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-09T20:00:00Z",
+        "mexicoCityDateTime": "2026-07-09T14:00:00-06:00",
+        "mexicoCityDate": "2026-07-09",
+        "mexicoCityTime": "14:00"
+      },
+      "venue": {
+        "stadium": "Boston Stadium",
+        "city": "Foxborough",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M098",
+      "matchNumber": 98,
+      "stage": "Quarter-final",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 93 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 94 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-10T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-10T19:00:00Z",
+        "mexicoCityDateTime": "2026-07-10T13:00:00-06:00",
+        "mexicoCityDate": "2026-07-10",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M099",
+      "matchNumber": 99,
+      "stage": "Quarter-final",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 91 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 92 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-11T22:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-11T21:00:00Z",
+        "mexicoCityDateTime": "2026-07-11T15:00:00-06:00",
+        "mexicoCityDate": "2026-07-11",
+        "mexicoCityTime": "15:00"
+      },
+      "venue": {
+        "stadium": "Miami Stadium",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M100",
+      "matchNumber": 100,
+      "stage": "Quarter-final",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 95 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 96 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-12T02:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-12T01:00:00Z",
+        "mexicoCityDateTime": "2026-07-11T19:00:00-06:00",
+        "mexicoCityDate": "2026-07-11",
+        "mexicoCityTime": "19:00"
+      },
+      "venue": {
+        "stadium": "Kansas City Stadium",
+        "city": "Kansas City",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M101",
+      "matchNumber": 101,
+      "stage": "Semi-final",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 97 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 98 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-14T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-14T19:00:00Z",
+        "mexicoCityDateTime": "2026-07-14T13:00:00-06:00",
+        "mexicoCityDate": "2026-07-14",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Dallas Stadium",
+        "city": "Arlington",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M102",
+      "matchNumber": 102,
+      "stage": "Semi-final",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 99 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 100 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-15T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-15T19:00:00Z",
+        "mexicoCityDateTime": "2026-07-15T13:00:00-06:00",
+        "mexicoCityDate": "2026-07-15",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "Atlanta Stadium",
+        "city": "Atlanta",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M103",
+      "matchNumber": 103,
+      "stage": "Third Place Playoff",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 101 losers",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 102 losers",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-18T22:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-18T21:00:00Z",
+        "mexicoCityDateTime": "2026-07-18T15:00:00-06:00",
+        "mexicoCityDate": "2026-07-18",
+        "mexicoCityTime": "15:00"
+      },
+      "venue": {
+        "stadium": "Miami Stadium",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    },
+    {
+      "id": "M104",
+      "matchNumber": 104,
+      "stage": "Final",
+      "group": null,
+      "homeTeam": {
+        "name": "Match 101 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "awayTeam": {
+        "name": "Match 102 winners",
+        "fifaCode": null,
+        "type": "placeholder"
+      },
+      "kickoff": {
+        "sourceLocalDateTime": "2026-07-19T20:00:00+01:00",
+        "sourceTimezone": "Europe/London",
+        "utcDateTime": "2026-07-19T19:00:00Z",
+        "mexicoCityDateTime": "2026-07-19T13:00:00-06:00",
+        "mexicoCityDate": "2026-07-19",
+        "mexicoCityTime": "13:00"
+      },
+      "venue": {
+        "stadium": "New York New Jersey Stadium",
+        "city": "New Jersey",
+        "country": "USA"
+      },
+      "estimatedDurationMinutes": 120,
+      "status": "scheduled",
+      "isFavorite": false,
+      "source": "Sky Sports schedule, UK kickoff times"
+    }
+  ]
+}
