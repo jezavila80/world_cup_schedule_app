@@ -1,0 +1,749 @@
+<?php
+/**
+ * Portal de Descargas de APKs
+ * ----------------------------------------------------
+ * Escanea, agrupa y muestra automáticamente los archivos APK en este directorio.
+ * Agrupa por nombre de aplicación y muestra la última versión arriba con historial expandible.
+ */
+
+// Escanear archivos APK en el directorio actual
+$apkFiles = glob("*.apk");
+
+$apks = [];
+foreach ($apkFiles as $file) {
+    if (!is_file($file)) continue;
+    
+    $sizeBytes = filesize($file);
+    // Formatear tamaño a MB con 2 decimales
+    $sizeMB = round($sizeBytes / (1024 * 1024), 2);
+    $modTime = filemtime($file);
+    
+    // Formato de fecha legible (Día/Mes/Año Hora)
+    $dateStr = date("d/m/Y h:i A", $modTime);
+    
+    // Extraer nombre de la app y versión
+    // Ej: world_cup_schedule_app_v0.7.0.apk -> Group: world_cup_schedule_app, Version: 0.7.0
+    $appNameRaw = '';
+    $version = '';
+    
+    if (preg_match('/^(.*?)[_ \-]v?([0-9]+\.[0-9]+\.[0-9]+.*?)\.apk$/i', $file, $matches)) {
+        $appNameRaw = $matches[1];
+        $version = $matches[2];
+    } elseif (preg_match('/^(.*?)_([a-zA-Z0-9_\-\.\+]+)\.apk$/i', $file, $matches)) {
+        $appNameRaw = $matches[1];
+        $version = $matches[2];
+    } else {
+        $appNameRaw = pathinfo($file, PATHINFO_FILENAME);
+        $version = 'N/A';
+    }
+    
+    $apks[] = [
+        'filename' => $file,
+        'appNameRaw' => $appNameRaw,
+        'version' => $version,
+        'size' => $sizeMB . ' MB',
+        'date' => $dateStr,
+        'timestamp' => $modTime
+    ];
+}
+
+// Formatear nombre de app para mostrarlo de forma elegante
+function formatAppName($rawName) {
+    $name = str_replace(['_', '-'], ' ', $rawName);
+    return ucwords($name);
+}
+
+// Agrupar por nombre de aplicación
+$groups = [];
+foreach ($apks as $apk) {
+    $groupKey = strtolower($apk['appNameRaw']);
+    if (!isset($groups[$groupKey])) {
+        $groups[$groupKey] = [
+            'displayName' => formatAppName($apk['appNameRaw']),
+            'rawName' => $apk['appNameRaw'],
+            'files' => []
+        ];
+    }
+    $groups[$groupKey]['files'][] = $apk;
+}
+
+// Ordenar las APKs dentro de cada grupo por versión (nueva arriba)
+foreach ($groups as &$group) {
+    usort($group['files'], function($a, $b) {
+        if ($a['version'] === 'N/A' || $b['version'] === 'N/A') {
+            return $b['timestamp'] - $a['timestamp'];
+        }
+        return version_compare($b['version'], $a['version']);
+    });
+}
+
+// Ordenar los grupos para que la app modificada más recientemente aparezca primero
+uasort($groups, function($a, $b) {
+    $newestA = $a['files'][0]['timestamp'];
+    $newestB = $b['files'][0]['timestamp'];
+    return $newestB - $newestA;
+});
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargas APK - Mis Aplicaciones</title>
+    
+    <!-- Fuentes de Google para máxima legibilidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(22, 30, 49, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary: #00f2fe;
+            --primary-rgb: 0, 242, 254;
+            --secondary: #4facfe;
+            --success: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-glow: rgba(79, 172, 254, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2rem 1rem;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Efectos de fondo decorativos */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, rgba(11,15,25,0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 580px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            padding: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-container {
+            width: 76px;
+            height: 76px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0, 242, 254, 0.3);
+            margin-bottom: 0.5rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            fill: #ffffff;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 90%;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        /* Tarjeta General de App */
+        .app-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.75rem;
+        }
+
+        .app-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .app-title-wrapper svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--primary);
+        }
+
+        .app-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .version-badge {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+        }
+
+        /* Layout de la Versión Principal (Última) */
+        .main-apk-item {
+            background: rgba(0, 242, 254, 0.03);
+            border: 1px solid rgba(0, 242, 254, 0.15);
+            border-radius: 18px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.05);
+        }
+
+        .main-apk-item::before {
+            content: 'ÚLTIMA VERSIÓN';
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #0b0f19;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(0, 242, 254, 0.2);
+        }
+
+        .apk-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .android-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(16, 185, 129, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .android-icon {
+            width: 26px;
+            height: 26px;
+            fill: var(--success);
+        }
+
+        .apk-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            min-width: 0;
+        }
+
+        .apk-title-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 90px; /* Evita empalme con el tag de ÚLTIMA VERSIÓN */
+        }
+
+        .apk-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .meta-icon {
+            width: 14px;
+            height: 14px;
+            fill: var(--text-muted);
+        }
+
+        /* Botón de Descarga Principal */
+        .download-btn-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #0b0f19;
+            border: none;
+            text-decoration: none;
+            padding: 0.9rem 1.5rem;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25);
+        }
+
+        .download-btn-main:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
+            filter: brightness(1.05);
+        }
+
+        .download-btn-main:active {
+            transform: scale(0.98);
+        }
+
+        /* Historial / Acordeón */
+        details {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            user-select: none;
+            outline: none;
+            padding: 0.5rem 0;
+            width: fit-content;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            display: inline-block;
+            transition: transform 0.2s ease;
+            font-size: 0.7rem;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding-top: 0.75rem;
+        }
+
+        .history-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .history-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .history-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            min-width: 0;
+        }
+
+        .history-version-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .history-meta {
+            display: flex;
+            gap: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .download-btn-history {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .download-btn-history:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        /* Instrucciones */
+        .instruction-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.75rem;
+        }
+
+        .card-title svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary);
+        }
+
+        .instructions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .instruction-step {
+            display: flex;
+            gap: 0.85rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 26px;
+            height: 26px;
+            background-color: rgba(79, 172, 254, 0.15);
+            color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+
+        .step-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+        }
+
+        .step-text strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .no-apks {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+        }
+
+        .no-apks svg {
+            width: 48px;
+            height: 48px;
+            fill: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.25rem 0.75rem;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .app-card, .instruction-card {
+                padding: 1.25rem;
+                border-radius: 20px;
+            }
+
+            .apk-title-text {
+                font-size: 1rem;
+                padding-right: 70px;
+            }
+
+            .download-btn-main {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Cabecera de la página -->
+        <header>
+            <div class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4c0.55,0 1.09,0.05 1.62,0.14l-1.12,3.44c-0.16,0.5-0.62,0.84-1.15,0.84H8.25L6,6.17C7.62,4.8 9.71,4 12,4M5.07,7.74l1.83,1.83c0.16,0.16 0.25,0.38 0.25,0.61v2.32H6v-2.07L4.17,9.45c0.26,-0.61 0.6,-1.18 1,-1.71m13.86,0c0.4,0.53 0.74,1.1 1,1.71L18,10.43v2.07h-1.15v-2.32c0,-0.23 0.09,-0.45 0.25,-0.61l1.83,-1.83M12,9.65L13.88,12.23c0.15,0.2 0.38,0.32 0.62,0.32h1.65v2.85c0,0.53 -0.42,0.95 -0.95,0.95h-2.4L12,19.57L10.8,16.35H8.4c-0.53,0 -0.95,-0.42 -0.95,-0.95v-2.85h1.65c0.24,0 0.47,-0.12 0.62,-0.32L12,9.65M4,13.5h1.9c0.28,0 0.5,0.22 0.5,0.5v2c0,0.28 -0.22,0.5 -0.5,0.5H4.07C4.02,16.03 4,15.53 4,15c0,-0.5 0.02,-1.03 0.07,-1.5M18.1,13.5H20c0.05,0.47 0.07,1 0.07,1.5c0,0.53 -0.02,1.03 -0.07,1.5H18.1c-0.28,0 -0.5,-0.22 -0.5,-0.5v-2c0,-0.28 0.22,-0.5 0.5,-0.5M5.07,17.74c0.88,1.15 2.1,2.04 3.51,2.54l-0.9,-2.48c-0.12,-0.33 -0.44,-0.55 -0.79,-0.55h-1.62c-0.08,0.16 -0.15,0.32 -0.2,0.49M18.93,17.74l-0.2,-0.49h-1.62c-0.35,0 -0.67,0.22 -0.79,0.55l-0.9,2.48c1.41,-0.5 2.63,-1.39 3.51,-2.54Z"/>
+                </svg>
+            </div>
+            <h1>Descargas APK</h1>
+            <p class="subtitle">Descarga las últimas compilaciones de prueba directamente en tu dispositivo Android</p>
+        </header>
+
+        <!-- Listado de aplicaciones agrupadas -->
+        <?php if (empty($groups)): ?>
+            <div class="no-apks">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20,18C21.1,18 22,17.1 22,16V4C22,2.9 21.1,2 20,2H4C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H0V20H24V18H20M4,4H20V16H4V4Z"/>
+                </svg>
+                <p>No se encontraron archivos APK en esta carpeta.</p>
+                <p style="font-size: 0.85rem;">Sube tus archivos APK al mismo directorio del servidor FTP.</p>
+            </div>
+        <?php else: ?>
+            <?php foreach ($groups as $group): 
+                $files = $group['files'];
+                $latest = $files[0];
+                $historyCount = count($files) - 1;
+            ?>
+                <main class="app-card">
+                    <!-- Cabecera de la aplicación -->
+                    <div class="app-header">
+                        <div class="app-title-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4,6H20V18H4M20,4A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4H20M11,12V9H13V12H16V14H13V17H11V14H8V12H11Z"/>
+                            </svg>
+                            <h2 class="app-title"><?php echo htmlspecialchars($group['displayName']); ?></h2>
+                        </div>
+                        <span class="version-badge">
+                            <?php echo count($files) === 1 ? '1 versión' : count($files) . ' versiones'; ?>
+                        </span>
+                    </div>
+                    
+                    <!-- Última Versión Destacada -->
+                    <div class="main-apk-item">
+                        <div class="apk-info">
+                            <div class="android-icon-wrapper">
+                                <svg class="android-icon" viewBox="0 0 24 24">
+                                    <path d="M15,5H14V2.5C14,2.22 13.78,2 13.5,2C13.22,2 13,2.22 13,2.5V5H11V2.5C11,2.22 10.78,2 10.5,2C10.22,2 10,2.22 10,2.5V5H9H8A3,3 0 0,0 5,8V18A3,3 0 0,0 8,21H16A3,3 0 0,0 19,18V8A3,3 0 0,0 16,5M9,13.5A1,1 0 1,1 10,12.5A1,1 0 0,1 9,13.5M15,13.5A1,1 0 1,1 16,12.5A1,1 0 0,1 15,13.5Z"/>
+                                </svg>
+                            </div>
+                            <div class="apk-details">
+                                <div class="apk-title-text" title="<?php echo htmlspecialchars($latest['filename']); ?>">
+                                    <?php echo htmlspecialchars($latest['filename']); ?>
+                                </div>
+                                <div class="apk-meta">
+                                    <span class="meta-item">
+                                        <svg class="meta-icon" viewBox="0 0 24 24"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"/></svg>
+                                        Versión: <?php echo htmlspecialchars($latest['version']); ?>
+                                    </span>
+                                    <span class="meta-item">
+                                        <svg class="meta-icon" viewBox="0 0 24 24"><path d="M6,2H18A2,2 0 0,1 20,4V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2M12,4A2,2 0 0,0 10,6A2,2 0 0,0 12,8A2,2 0 0,0 14,6A2,2 0 0,0 12,4M18,18V10H6V18H18Z"/></svg>
+                                        Peso: <?php echo htmlspecialchars($latest['size']); ?>
+                                    </span>
+                                    <span class="meta-item">
+                                        <svg class="meta-icon" viewBox="0 0 24 24"><path d="M19,19H5V8H19M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"/></svg>
+                                        <?php echo htmlspecialchars($latest['date']); ?>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="<?php echo urlencode($latest['filename']); ?>" class="download-btn-main" download>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                            </svg>
+                            Descargar APK Más Reciente
+                        </a>
+                    </div>
+
+                    <!-- Historial de versiones anteriores (si existen) -->
+                    <?php if ($historyCount > 0): ?>
+                        <details>
+                            <summary>Ver versiones anteriores (<?php echo $historyCount; ?>)</summary>
+                            <div class="history-list">
+                                <?php for ($i = 1; $i < count($files); $i++): 
+                                    $prev = $files[$i];
+                                ?>
+                                    <div class="history-item">
+                                        <div class="history-details">
+                                            <div class="history-version-title">
+                                                Versión <?php echo htmlspecialchars($prev['version']); ?>
+                                            </div>
+                                            <div class="history-meta">
+                                                <span><?php echo htmlspecialchars($prev['size']); ?></span>
+                                                <span>•</span>
+                                                <span><?php echo htmlspecialchars($prev['date']); ?></span>
+                                            </div>
+                                        </div>
+                                        <a href="<?php echo urlencode($prev['filename']); ?>" class="download-btn-history" download>
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                                            </svg>
+                                            Descargar
+                                        </a>
+                                    </div>
+                                <?php endfor; ?>
+                            </div>
+                        </details>
+                    <?php endif; ?>
+                </main>
+            <?php endforeach; ?>
+        <?php endif; ?>
+
+        <!-- Tarjeta de Instrucciones de Instalación -->
+        <section class="instruction-card">
+            <h2 class="card-title">
+                <svg viewBox="0 0 24 24"><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20c-4.41,0 -8,-3.59 -8,-8c0,-4.41 3.59,-8 8,-8c4.41,0 8,3.59 8,8C20,16.41 16.41,20 12,20M12,6C9.79,6 8,7.79 8,10H10c0,-1.1 0.9,-2 2,-2c1.1,0 2,0.9 2,2c0,2 -3,1.75 -3,5H15c0,-2.25 3,-2.5 3,-5C18,7.79 16.21,6 12,6Z"/></svg>
+                ¿Cómo instalar la aplicación?
+            </h2>
+            <div class="instructions-list">
+                <div class="instruction-step">
+                    <span class="step-number">1</span>
+                    <p class="step-text">Pulsa el botón de <strong>Descargar</strong> en la APK elegida directamente desde tu dispositivo Android.</p>
+                </div>
+                <div class="instruction-step">
+                    <span class="step-number">2</span>
+                    <p class="step-text">Cuando finalice la descarga, abre el archivo desde la barra de notificaciones o tu carpeta de <strong>Descargas</strong>.</p>
+                </div>
+                <div class="instruction-step">
+                    <span class="step-number">3</span>
+                    <p class="step-text">Si tu sistema te lo solicita, concede el permiso para <strong>"Instalar aplicaciones de origen desconocido"</strong> en los ajustes del navegador o gestor de archivos.</p>
+                </div>
+                <div class="instruction-step">
+                    <span class="step-number">4</span>
+                    <p class="step-text">Pulsa en <strong>"Instalar"</strong> y al terminar la instalación podrás abrir la aplicación de inmediato.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer>
+            &copy; <?php echo date("Y"); ?> Mis Aplicaciones APK. Todos los derechos reservados.
+        </footer>
+        
+    </div>
+
+</body>
+</html>

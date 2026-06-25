@@ -1,4 +1,56 @@
 {
+  "groupStandings": {
+    "en": "Group Standings",
+    "es": "Tablas de Grupos"
+  },
+  "standingsTab": {
+    "en": "Standings",
+    "es": "Posiciones"
+  },
+  "team": {
+    "en": "Team",
+    "es": "Equipo"
+  },
+  "playedAbbr": {
+    "en": "P",
+    "es": "PJ"
+  },
+  "wonAbbr": {
+    "en": "W",
+    "es": "G"
+  },
+  "drawnAbbr": {
+    "en": "D",
+    "es": "E"
+  },
+  "lostAbbr": {
+    "en": "L",
+    "es": "P"
+  },
+  "goalsForAbbr": {
+    "en": "GF",
+    "es": "GF"
+  },
+  "goalsAgainstAbbr": {
+    "en": "GA",
+    "es": "GC"
+  },
+  "goalDiffAbbr": {
+    "en": "GD",
+    "es": "DG"
+  },
+  "pointsAbbr": {
+    "en": "PTS",
+    "es": "PTS"
+  },
+  "qualifiedBadge": {
+    "en": "Qualified",
+    "es": "Clasifica"
+  },
+  "noStandingsResults": {
+    "en": "No results have been registered yet to calculate standings.",
+    "es": "Aún no hay resultados capturados para calcular la tabla de posiciones."
+  },
   "favorites": {
     "en": "Favorites",
     "es": "Favoritos"
@@ -310,5 +362,182 @@
   "unexpectedError": {
     "en": "An unexpected error occurred.",
     "es": "Ocurrió un error inesperado."
+  },
+  "knockoutTitle": {
+    "en": "Bracket & Qualifiers",
+    "es": "Llaves y Clasificados"
+  },
+  "qualifiedTeams": {
+    "en": "Qualified Teams",
+    "es": "Equipos Clasificados"
+  },
+  "qualifiedStatus": {
+    "en": "Qualified",
+    "es": "Clasificado"
+  },
+  "bestThirdStatus": {
+    "en": "Best 3rd",
+    "es": "Mejor 3°"
+  },
+  "eliminatedStatus": {
+    "en": "Eliminated",
+    "es": "Eliminado"
+  },
+  "pendingStatus": {
+    "en": "Pending",
+    "es": "Pendiente"
+  },
+  "bestThirds": {
+    "en": "Best Third Places",
+    "es": "Mejores Terceros"
+  },
+  "knockoutBracket": {
+    "en": "Knockout Bracket",
+    "es": "Llaves Eliminatorias"
+  },
+  "group": {
+    "en": "Group",
+    "es": "Grupo"
+  },
+  "groupWinner": {
+    "en": "Group Winner",
+    "es": "Ganador de Grupo"
+  },
+  "groupRunnerUp": {
+    "en": "Group Runner-up",
+    "es": "Subcampeón de Grupo"
+  },
+  "bestThirdTbd": {
+    "en": "Best 3rd TBD",
+    "es": "Mejor 3° pendiente"
+  },
+  "notEnoughResults": {
+    "en": "Not enough completed matches to calculate qualifiers.",
+    "es": "Aún no hay suficientes resultados para calcular clasificados."
+  },
+  "bracket": {
+    "en": "Bracket",
+    "es": "Llaves"
+  },
+  "q_winners": {
+    "en": "Winners",
+    "es": "Ganadores"
+  },
+  "q_runners_up": {
+    "en": "Runners-up",
+    "es": "Subcampeones"
+  },
+  "q_best_thirds": {
+    "en": "Best Thirds",
+    "es": "Mejores Terceros"
+  },
+  "settings": {
+    "en": "Settings",
+    "es": "Configuración"
+  },
+  "settingsTitle": {
+    "en": "Settings",
+    "es": "Ajustes"
+  },
+  "language": {
+    "en": "Language",
+    "es": "Idioma"
+  },
+  "system": {
+    "en": "System",
+    "es": "Sistema"
+  },
+  "spanish": {
+    "en": "Spanish",
+    "es": "Español"
+  },
+  "english": {
+    "en": "English",
+    "es": "English"
+  },
+  "languageSectionTitle": {
+    "en": "LANGUAGE",
+    "es": "IDIOMA"
+  },
+  "tournamentValidation": {
+    "en": "Tournament Validation",
+    "es": "Validación del Torneo"
+  },
+  "validationPassed": {
+    "en": "Passed",
+    "es": "Correcto"
+  },
+  "validationWarning": {
+    "en": "Warning",
+    "es": "Advertencia"
+  },
+  "validationError": {
+    "en": "Error",
+    "es": "Error"
+  },
+  "groupsDetected": {
+    "en": "Groups detected",
+    "es": "Grupos detectados"
+  },
+  "groupWinners": {
+    "en": "Group winners",
+    "es": "Primeros lugares"
+  },
+  "groupRunnersUp": {
+    "en": "Group runners-up",
+    "es": "Segundos lugares"
+  },
+  "thirdPlaces": {
+    "en": "Third places",
+    "es": "Terceros lugares"
+  },
+  "bestThirds": {
+    "en": "Best thirds",
+    "es": "Mejores terceros"
+  },
+  "qualifiedTeams": {
+    "en": "Qualified teams",
+    "es": "Clasificados"
+  },
+  "eliminatedTeams": {
+    "en": "Eliminated teams",
+    "es": "Eliminados"
+  },
+  "duplicateTeams": {
+    "en": "Duplicate teams",
+    "es": "Equipos duplicados"
+  },
+  "bracketSlots": {
+    "en": "Bracket slots",
+    "es": "Slots de bracket"
+  },
+  "groupInProgress": {
+    "en": "Group in progress",
+    "es": "Grupo en progreso"
+  },
+  "groupCompleted": {
+    "en": "Group completed",
+    "es": "Grupo completo"
+  },
+  "validationPassedDetail": {
+    "en": "Validation passed successfully.",
+    "es": "Validación completada con éxito."
+  },
+  "validationFailedDetail": {
+    "en": "Validation failed. Check issues list below.",
+    "es": "La validación falló. Revisa la lista de problemas abajo."
+  },
+  "issues": {
+    "en": "Issues",
+    "es": "Problemas"
+  },
+  "noIssues": {
+    "en": "No issues detected.",
+    "es": "No se detectaron problemas."
+  },
+  "validationChecks": {
+    "en": "Validation Checks",
+    "es": "Controles de Validación"
   }
 }
+

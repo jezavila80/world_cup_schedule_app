@@ -7,6 +7,7 @@ import '../models/match_result_status.dart';
 import 'flag_circle_avatar.dart';
 import 'score_display.dart';
 import 'match_result_badge.dart';
+import 'blinking_live_indicator.dart';
 
 class MatchCard extends StatelessWidget {
   final WorldCupMatch match;
@@ -522,7 +523,10 @@ class MatchCard extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          if (icon != null) ...[
+          if (status == MatchStatus.live) ...[
+            const BlinkingLiveIndicator(size: 6),
+            const SizedBox(width: 4),
+          ] else if (icon != null) ...[
             Icon(icon, size: 8, color: textColor),
             const SizedBox(width: 3),
           ],

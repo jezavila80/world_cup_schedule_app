@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:world_cup_schedule_app/core/app_info/app_info.dart';
 import 'package:world_cup_schedule_app/core/i18n/localized_text.dart';
 import 'package:world_cup_schedule_app/features/matches/models/world_cup_match.dart';
 import 'package:world_cup_schedule_app/features/matches/models/flag_style.dart';
@@ -254,6 +255,14 @@ void main() {
       expect(filtered.first.id, 'M002');
     });
 
+    test('should not match host country of the venue in search query', () {
+      // Searching for 'Canada' should match match3 (Canada team playing) but not match4 (played in Canada, but Argentina vs France)
+      const filters = FilterState(searchQuery: 'Canada');
+      final filtered = filters.apply(matchesList, mockNow);
+      expect(filtered.length, 1);
+      expect(filtered.first.id, 'M003');
+    });
+
     test('should filter by host country correctly', () {
       const filters = FilterState(hostCountry: 'Mexico');
       final filtered = filters.apply(matchesList, mockNow);
@@ -324,14 +333,22 @@ void main() {
   group('AboutScreen Widget Tests', () {
     testWidgets('AboutScreen should render app title, version, and feature details', (WidgetTester tester) async {
       await tester.pumpWidget(
-        const MaterialApp(
-          home: AboutScreen(),
+        MaterialApp(
+          home: AppInfoScope(
+            appInfo: AppInfo(
+              appName: 'World Cup Schedule App',
+              version: '0.8.1',
+              buildNumber: '14',
+              versionLabel: 'v0.8.1',
+            ),
+            child: const AboutScreen(),
+          ),
         ),
       );
 
       expect(find.text('Acerca de la App'), findsOneWidget);
       expect(find.text('World Cup Schedule App'), findsOneWidget);
-      expect(find.text('v0.6.0'), findsOneWidget);
+      expect(find.text('v0.8.1'), findsWidgets); // Found in header and main area
       expect(find.text('Personal FIFA World Cup 2026 Match Tracker'), findsOneWidget);
       expect(find.text('Calendario de Partidos'), findsOneWidget);
       expect(find.text('Favoritos Offline'), findsOneWidget);

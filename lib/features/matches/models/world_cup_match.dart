@@ -327,8 +327,6 @@ class WorldCupMatch {
         normalizeText(awayTeam.name.es).contains(normalizedQuery) ||
         normalizeText(city.name.en).contains(normalizedQuery) ||
         normalizeText(city.name.es).contains(normalizedQuery) ||
-        normalizeText(country.name.en).contains(normalizedQuery) ||
-        normalizeText(country.name.es).contains(normalizedQuery) ||
         normalizeText(stadium.name.en).contains(normalizedQuery) ||
         normalizeText(stadium.name.es).contains(normalizedQuery);
   }

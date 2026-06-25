@@ -1,0 +1,15 @@
+- [ ] Create models: `validation_severity.dart`, `validation_check.dart`, `validation_issue.dart`, `tournament_validation_result.dart`
+- [ ] Create `StandingSortService` in `lib/features/tournament_engine/services/standing_sort_service.dart`
+- [ ] Create `TournamentValidationService` in `lib/features/tournament_engine/services/tournament_validation_service.dart`
+- [ ] Refactor `GroupStandingsService` to use `StandingSortService`
+- [ ] Refactor `KnockoutQualificationService` to use `StandingSortService`
+- [ ] Refactor `BestThirdPlacesSection` to use `StandingSortService`
+- [ ] Update `QualifiedTeamsSection` (Winners UI) to show points, GD, and proper status badge
+- [ ] Update translation files (`app_translations.json`) with validation strings
+- [ ] Create dashboard UI widgets: `validation_check_tile.dart`, `validation_issue_tile.dart`, `validation_summary_card.dart`
+- [ ] Create `TournamentValidationScreen`
+- [ ] Update `SettingsScreen` to have the "Tournament Validation" entry tile
+- [ ] Update `MatchListScreen` navigation to pass repositories to `SettingsScreen`
+- [ ] Document `v0.8.1 - Tournament Engine Validation` in `README.md` and `pubspec.yaml` (if needed)
+- [ ] Create and run unit tests in `test/features/tournament_engine/tournament_validation_service_test.dart`
+- [ ] Create and run widget tests in `test/features/knockout/winners_section_test.dart`

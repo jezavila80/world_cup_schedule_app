@@ -2,36 +2,55 @@ import 'package:flutter/material.dart';
 import 'features/matches/data/match_repository.dart';
 import 'features/matches/data/flag_style_repository.dart';
 import 'features/matches/screens/match_list_screen.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'core/settings/locale_controller.dart';
+import 'core/app_info/app_info.dart';
 
 class WorldCupApp extends StatelessWidget {
   final MatchRepository matchRepository;
   final FlagStyleRepository flagStyleRepository;
+  final LocaleController localeController;
+  final AppInfo appInfo;
 
   const WorldCupApp({
     super.key,
     required this.matchRepository,
     required this.flagStyleRepository,
+    required this.localeController,
+    required this.appInfo,
   });
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'FIFA World Cup 2026',
-      debugShowCheckedModeBanner: false,
-      supportedLocales: const [
-        Locale('en'),
-        Locale('es'),
-      ],
-      localeResolutionCallback: (locale, supportedLocales) {
-        if (locale != null) {
-          for (var supportedLocale in supportedLocales) {
-            if (supportedLocale.languageCode == locale.languageCode) {
-              return supportedLocale;
+    return AppInfoScope(
+      appInfo: appInfo,
+      child: ListenableBuilder(
+        listenable: localeController,
+        builder: (context, _) {
+          return MaterialApp(
+            locale: localeController.appLocale,
+          title: 'FIFA World Cup 2026',
+          debugShowCheckedModeBanner: false,
+          supportedLocales: const [
+            Locale('en'),
+            Locale('es'),
+          ],
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          localeResolutionCallback: (locale, supportedLocales) {
+            if (locale == null) return const Locale('en');
+
+            for (final supportedLocale in supportedLocales) {
+              if (supportedLocale.languageCode == locale.languageCode) {
+                return supportedLocale;
+              }
             }
-          }
-        }
-        return const Locale('en');
-      },
+
+            return const Locale('en');
+          },
       themeMode: ThemeMode.dark, // Defaulting to an immersive dark mode
       darkTheme: ThemeData(
         useMaterial3: true,
@@ -106,10 +125,14 @@ class WorldCupApp extends StatelessWidget {
           ),
         ),
       ),
-      home: MatchListScreen(
-        matchRepository: matchRepository,
-        flagStyleRepository: flagStyleRepository,
-      ),
-    );
-  }
+          home: MatchListScreen(
+            matchRepository: matchRepository,
+            flagStyleRepository: flagStyleRepository,
+            localeController: localeController,
+          ),
+        );
+      },
+    ),
+  );
+}
 }

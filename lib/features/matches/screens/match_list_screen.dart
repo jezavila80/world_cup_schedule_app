@@ -2,26 +2,35 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../core/i18n/locale_helper.dart';
 import '../../../core/i18n/app_translations.dart';
+import '../../../core/widgets/world_cup_header.dart';
 import '../data/match_repository.dart';
 import '../data/flag_style_repository.dart';
 import '../models/world_cup_match.dart';
 import '../models/match_result_status.dart';
 import '../widgets/match_card.dart';
 import '../widgets/edit_result_dialog.dart';
+import '../widgets/blinking_live_indicator.dart';
 import '../filters/filter_state.dart';
 import '../filters/filter_bottom_sheet.dart';
 import '../filters/active_filter_chips.dart';
 import 'match_detail_screen.dart';
 import 'about_screen.dart';
+import '../../settings/screens/settings_screen.dart';
+import '../../../core/settings/locale_controller.dart';
+import '../../standings/screens/group_standings_dashboard_screen.dart';
+import '../../knockout/screens/knockout_dashboard_screen.dart';
+
 
 class MatchListScreen extends StatefulWidget {
   final MatchRepository matchRepository;
   final FlagStyleRepository flagStyleRepository;
+  final LocaleController localeController;
 
   const MatchListScreen({
     super.key,
     required this.matchRepository,
     required this.flagStyleRepository,
+    required this.localeController,
   });
 
   @override
@@ -151,7 +160,21 @@ class _MatchListScreenState extends State<MatchListScreen> {
                 ? _buildErrorWidget(theme, lang)
                 : _currentIndex == 0
                     ? _buildMatchesTab(theme, lang)
-                    : _buildFavoritesTab(theme, lang),
+                    : _currentIndex == 1
+                        ? _buildFavoritesTab(theme, lang)
+                        : _currentIndex == 2
+                            ? GroupStandingsDashboardScreen(
+                                matches: _allMatches,
+                                flagStyleRepository: widget.flagStyleRepository,
+                                lang: lang,
+                                onRefresh: _loadMatches,
+                              )
+                            : KnockoutDashboardScreen(
+                                matches: _allMatches,
+                                flagStyleRepository: widget.flagStyleRepository,
+                                lang: lang,
+                                onRefresh: _loadMatches,
+                              ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -169,8 +192,17 @@ class _MatchListScreenState extends State<MatchListScreen> {
             icon: const Icon(Icons.favorite),
             label: AppTranslations.translate('myFavorites', lang),
           ),
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.leaderboard),
+            label: AppTranslations.translate('standingsTab', lang),
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.hub),
+            label: AppTranslations.translate('bracket', lang),
+          ),
         ],
       ),
+
     );
   }
 
@@ -206,7 +238,7 @@ class _MatchListScreenState extends State<MatchListScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     children: [
                       if (liveMatches.isNotEmpty) ...[
-                        _buildSectionHeader(theme, '${AppTranslations.translate('live', lang).toUpperCase()} 🔴', const Color(0xFFFF4D4D)),
+                        _buildSectionHeader(theme, AppTranslations.translate('live', lang).toUpperCase(), const Color(0xFFFF4D4D), isLive: true),
                         ...liveMatches.map((m) => _buildMatchCardItem(m, lang)),
                       ],
                       if (todayMatches.isNotEmpty) ...[
@@ -230,7 +262,7 @@ class _MatchListScreenState extends State<MatchListScreen> {
     );
   }
 
-  Widget _buildSectionHeader(ThemeData theme, String title, Color color) {
+  Widget _buildSectionHeader(ThemeData theme, String title, Color color, {bool isLive = false}) {
     return Padding(
       padding: const EdgeInsets.only(top: 12.0, bottom: 6.0, left: 4.0),
       child: Row(
@@ -253,6 +285,10 @@ class _MatchListScreenState extends State<MatchListScreen> {
               letterSpacing: 1.0,
             ),
           ),
+          if (isLive) ...[
+            const SizedBox(width: 6),
+            const BlinkingLiveIndicator(size: 8),
+          ],
         ],
       ),
     );
@@ -389,42 +425,10 @@ class _MatchListScreenState extends State<MatchListScreen> {
 
     return Column(
       children: [
-        // Custom simple header for Favorites
-        Container(
-          width: double.infinity,
-          padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                const Color(0xFF0F172A),
-                theme.scaffoldBackgroundColor,
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                AppTranslations.translate('myCompetition', lang),
-                style: TextStyle(
-                  fontSize: 11,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 2.0,
-                  color: theme.colorScheme.secondary,
-                ),
-              ),
-              Text(
-                AppTranslations.translate('myFavorites', lang),
-                style: const TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
+        WorldCupHeader(
+          title: AppTranslations.translate('myFavorites', lang),
+          showVersion: true,
+          showBackButton: false,
         ),
 
         Expanded(
@@ -444,103 +448,75 @@ class _MatchListScreenState extends State<MatchListScreen> {
   }
 
   Widget _buildHeader(ThemeData theme, String lang) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            const Color(0xFF0F172A),
-            theme.scaffoldBackgroundColor,
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+    return WorldCupHeader(
+      title: 'World Cup 2026',
+      showVersion: true,
+      showBackButton: false,
+      onBrandingTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const AboutScreen()),
+        );
+      },
+      actions: [
+        // Settings button
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SettingsScreen(
+                  localeController: widget.localeController,
+                  matchRepository: widget.matchRepository,
+                  flagStyleRepository: widget.flagStyleRepository,
+                ),
+              ),
+            );
+          },
+          child: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: const Color(0xFF1E294B),
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: theme.colorScheme.primary.withOpacity(0.5),
+                width: 1.2,
+              ),
+            ),
+            child: const Icon(
+              Icons.settings,
+              color: Colors.white70,
+              size: 20,
+            ),
+          ),
         ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AboutScreen()),
-              );
-            },
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      'FIFA WORLD CUP',
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 2.0,
-                        color: theme.colorScheme.secondary,
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF1E294B),
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: theme.colorScheme.primary.withOpacity(0.3),
-                          width: 0.8,
-                        ),
-                      ),
-                      child: Text(
-                        'v0.6.0',
-                        style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          color: theme.colorScheme.primary,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const Text(
-                  'World Cup 2026',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          // World cup styled badge
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AboutScreen()),
-              );
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1E294B),
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: theme.colorScheme.primary.withOpacity(0.5),
-                  width: 1.2,
-                ),
-              ),
-              child: const Icon(
-                Icons.emoji_events,
-                color: Color(0xFFFFD700),
-                size: 22,
+        const SizedBox(width: 8),
+        // About / Trophy button
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const AboutScreen()),
+            );
+          },
+          child: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: const Color(0xFF1E294B),
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: theme.colorScheme.primary.withOpacity(0.5),
+                width: 1.2,
               ),
             ),
+            child: const Icon(
+              Icons.emoji_events,
+              color: Color(0xFFFFD700),
+              size: 20,
+            ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
@@ -595,7 +571,7 @@ class _MatchListScreenState extends State<MatchListScreen> {
                 ),
                 child: IconButton(
                   icon: Icon(
-                    _filterState.hasActiveFilters ? Icons.settings : Icons.settings_outlined,
+                    _filterState.hasActiveFilters ? Icons.filter_alt : Icons.filter_alt_outlined,
                     color: _filterState.hasActiveFilters
                         ? theme.colorScheme.primary
                         : Colors.white70,
@@ -638,7 +614,10 @@ class _MatchListScreenState extends State<MatchListScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          _buildSummaryItem('🔴', '$liveCount ${AppTranslations.translate('liveLower', lang)}'),
+          _buildSummaryItem(
+            const BlinkingLiveIndicator(size: 8),
+            '$liveCount ${AppTranslations.translate('liveLower', lang)}',
+          ),
           const SizedBox(width: 16),
           _buildSummaryItem('⚽', '$todayCount ${AppTranslations.translate('todayLower', lang)}'),
           const SizedBox(width: 16),
@@ -648,11 +627,14 @@ class _MatchListScreenState extends State<MatchListScreen> {
     );
   }
 
-  Widget _buildSummaryItem(String emoji, String text) {
+  Widget _buildSummaryItem(dynamic leading, String text) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(emoji, style: const TextStyle(fontSize: 12)),
+        if (leading is String)
+          Text(leading, style: const TextStyle(fontSize: 12))
+        else if (leading is Widget)
+          leading,
         const SizedBox(width: 4),
         Text(
           text,
@@ -806,8 +788,8 @@ class _MatchListScreenState extends State<MatchListScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         final lang = LocaleHelper.supportedLanguageCode(dialogContext);
-        return WillPopScope(
-          onWillPop: () async => false,
+        return PopScope(
+          canPop: false,
           child: Dialog(
             backgroundColor: const Color(0xFF151D30),
             shape: RoundedRectangleBorder(

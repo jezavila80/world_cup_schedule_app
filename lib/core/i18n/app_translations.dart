@@ -21,4 +21,8 @@ class AppTranslations {
     }
     return key;
   }
+
+  static void setTranslations(Map<String, dynamic> translations) {
+    _translations = translations;
+  }
 }
